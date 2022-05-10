@@ -1,3 +1,5 @@
+import "react-native-gesture-handler";
+
 import {
   useFonts,
   Inter_400Regular,
@@ -21,8 +23,8 @@ export default function App() {
 
   return (
     <View style={{ flex: 1, backgroundColor: theme.colors.background }}>
-      <Widget />
       <StatusBar style="light" backgroundColor="transparent" translucent />
+      <Widget />
     </View>
   );
 }
