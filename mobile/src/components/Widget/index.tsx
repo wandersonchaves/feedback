@@ -7,7 +7,7 @@ import { theme } from "../../theme";
 import { styles } from "./styles";
 import { gestureHandlerRootHOC } from "react-native-gesture-handler";
 
-export function Widget() {
+function Widget() {
   const bottomSheetRef = useRef<BottomSheet>(null);
 
   function handleOpen() {
@@ -24,9 +24,14 @@ export function Widget() {
         />
       </TouchableOpacity>
 
-      <BottomSheet ref={bottomSheetRef} snapPoints={[1, 280]}></BottomSheet>
+      <BottomSheet
+        ref={bottomSheetRef}
+        snapPoints={[1, 280]}
+        backgroundStyle={styles.modal}
+        handleIndicatorStyle={styles.indicator}
+      ></BottomSheet>
     </>
   );
 }
 
-// export default gkestureHandlerRootHOC(Widget);
+export default gestureHandlerRootHOC(Widget);
