@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import {
   Image,
   ImageProps,
@@ -6,13 +6,13 @@ import {
   TouchableHighlightProps,
   TouchableOpacity,
   View,
-} from "react-native";
+} from 'react-native'
 
-import { styles } from "./styles";
+import { styles } from './styles'
 
 interface Props extends TouchableHighlightProps {
-  title: string;
-  image: ImageProps;
+  title: string
+  image: ImageProps
 }
 
 export function Option({ title, image, ...rest }: Props) {
@@ -22,5 +22,5 @@ export function Option({ title, image, ...rest }: Props) {
 
       <Text style={styles.title}>{title}</Text>
     </TouchableOpacity>
-  );
+  )
 }
